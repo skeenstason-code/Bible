@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The One Story That Leads to Jesus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>The One Story That Leads to Jesus</h1>
+  <p class="subtitle">A daily Bible reading plan you can begin at any time.</p>
+
+  <input
+    type="number"
+    id="day-search"
+    placeholder="Jump to Day (1–358)"
+    min="1"
+    max="358"
+  />
+</header>
+
+<main>
+  <section class="day-card">
+    <h2 id="day-title"></h2>
+
+    <h3>Scripture</h3>
+    <p id="scripture"></p>
+
+    <h3>Psalm</h3>
+    <p id="psalm"></p>
+
+    <h3>Resources</h3>
+    <ul id="resources"></ul>
+  </section>
+
+  <nav>
+    <button id="prev">← Previous</button>
+    <button id="next">Next →</button>
+  </nav>
+</main>
+
+<footer>
+  <p>
+    Resources provided by
+    <a href="https://bibleproject.com" target="_blank">BibleProject</a>
+  </p>
+</footer>
+<script src="plan.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
