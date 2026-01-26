@@ -2,52 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>The One Story That Leads to Jesus</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The One Story That Leads to Jesus</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>The One Story That Leads to Jesus</h1>
+      <p class="subtitle">A daily Bible reading plan you can begin at any time.</p>
 
-<header>
-  <h1>The One Story That Leads to Jesus</h1>
-  <p class="subtitle">A daily Bible reading plan you can begin at any time.</p>
+      <form id="jump-form" class="jump" autocomplete="off">
+        <label class="sr-only" for="day-search">Jump to day</label>
+        <input type="number" id="day-search" inputmode="numeric" placeholder="Jump to Day" min="1" />
+        <button type="submit" id="jump-btn">Go</button>
+      </form>
 
-  <input
-    type="number"
-    id="day-search"
-    placeholder="Jump to Day (1–358)"
-    min="1"
-    max="358"
-  />
-</header>
+      <p id="jump-help" class="help"></p>
+      <p id="status" class="help"></p>
+    </div>
+  </header>
 
-<main>
-  <section class="day-card">
-    <h2 id="day-title"></h2>
+  <main class="main">
+    <section class="day-card" aria-live="polite">
+      <div class="day-head">
+        <h2 id="day-title">Day</h2>
+        <div class="pill" id="day-count"></div>
+      </div>
 
-    <h3>Scripture</h3>
-    <p id="scripture"></p>
+      <div class="block">
+        <h3>Scripture</h3>
+        <p id="scripture"></p>
+      </div>
 
-    <h3>Psalm</h3>
-    <p id="psalm"></p>
+      <div class="block">
+        <h3>Psalm</h3>
+        <p id="psalm"></p>
+      </div>
 
-    <h3>Resources</h3>
-    <ul id="resources"></ul>
-  </section>
+      <div class="block">
+        <h3>Resources</h3>
+        <ul id="resources"></ul>
+        <p id="no-resources" class="muted" hidden>No extra resources for today.</p>
+      </div>
+    </section>
 
-  <nav>
-    <button id="prev">← Previous</button>
-    <button id="next">Next →</button>
-  </nav>
-</main>
+    <nav class="nav">
+      <button id="prev" type="button">← Previous</button>
+      <button id="next" type="button">Next →</button>
+    </nav>
+  </main>
 
-<footer>
-  <p>
-    Resources provided by
-    <a href="https://bibleproject.com" target="_blank">BibleProject</a>
-  </p>
-</footer>
-<script src="plan.js"></script>
-<script src="script.js"></script>
+  <footer class="footer">
+    <p>
+      Resources provided by
+      <a href="https://bibleproject.com" target="_blank" rel="noopener noreferrer">BibleProject</a>
+      • Readings open on
+      <a href="https://www.biblegateway.com" target="_blank" rel="noopener noreferrer">BibleGateway (CEB)</a>
+    </p>
+  </footer>
+
+  <!-- IMPORTANT: plan.js MUST load before script.js -->
+  <script src="plan.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
