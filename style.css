@@ -31,3 +31,5 @@ a:hover{text-decoration:underline}
 .nav button:disabled{opacity:.45;cursor:not-allowed}
 .footer{padding:1.5rem 1rem;text-align:center;color:var(--muted);font-size:.95rem}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.redletters{color:#FF0000;}
+
